@@ -18,7 +18,7 @@ Faça o download deste repositório.
 
 ### Instale o Google Chrome
 
-A instalação do Google Chrome pode ser realizada atraves do site 'https://www.google.com/intl/pt-BR/chrome/' ou por linha de comando:
+A instalação do Google Chrome pode ser realizada através do site 'https://www.google.com/intl/pt-BR/chrome/' ou por linha de comando:
 
 `wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O chrome.deb`
 
@@ -40,7 +40,7 @@ Note que elas foram especificadas no arquivo 'Gemfile'.
 
 ## Rodando o teste
 
-Para rodar o teste, foi criado a seguinte tag 'cucumber --tags @FluxoCritico'. Dessa forma, basta digitar essa tag na linha de comando que o teste será iniciado automaticamente.
+Para rodar o teste, foi criado a seguinte tag `cucumber --tags @FluxoCritico`. Dessa forma, basta digitar essa tag na linha de comando que o teste será iniciado automaticamente.
 
 ## Observações
 
