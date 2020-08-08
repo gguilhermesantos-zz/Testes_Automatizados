@@ -1,0 +1,72 @@
+"gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-2.5.0 -I/usr/include/ruby-2.5.0/ruby/backward -I/usr/include/ruby-2.5.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -fdebug-prefix-map=/build/ruby2.5-o26AGW/ruby2.5-2.5.5=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC  conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-z,relro -Wl,-z,now -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby-2.5  -lpthread -lgmp -ldl -lcrypt -lm   -lc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc -I/usr/include/x86_64-linux-gnu/ruby-2.5.0 -I/usr/include/ruby-2.5.0/ruby/backward -I/usr/include/ruby-2.5.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -fdebug-prefix-map=/build/ruby2.5-o26AGW/ruby2.5-2.5.5=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC    -Werror -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+have_library: checking for gzdopen() in -lz... -------------------- no
+
+"gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-2.5.0 -I/usr/include/ruby-2.5.0/ruby/backward -I/usr/include/ruby-2.5.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -fdebug-prefix-map=/build/ruby2.5-o26AGW/ruby2.5-2.5.5=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC  -g -DXP_UNIX -Wall -Wcast-qual -Wwrite-strings -Wmissing-noreturn -Winline conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-z,relro -Wl,-z,now -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby-2.5 -lz  -lpthread -lgmp -ldl -lcrypt -lm   -lc "
+conftest.c:3:10: fatal error: zlib.h: No such file or directory
+ #include <zlib.h>
+          ^~~~~~~~
+compilation terminated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <zlib.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))gzdopen; return !p; }
+/* end */
+
+"gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-2.5.0 -I/usr/include/ruby-2.5.0/ruby/backward -I/usr/include/ruby-2.5.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -fdebug-prefix-map=/build/ruby2.5-o26AGW/ruby2.5-2.5.5=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC  -g -DXP_UNIX -Wall -Wcast-qual -Wwrite-strings -Wmissing-noreturn -Winline conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-z,relro -Wl,-z,now -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby-2.5 -lz  -lpthread -lgmp -ldl -lcrypt -lm   -lc "
+conftest.c:3:10: fatal error: zlib.h: No such file or directory
+ #include <zlib.h>
+          ^~~~~~~~
+compilation terminated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <zlib.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: extern void gzdopen();
+16: int t(void) { gzdopen(); return 0; }
+/* end */
+
+--------------------
+

@@ -1,0 +1,43 @@
+current directory: /home/guime/desafio_QA/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.10.10/ext/nokogiri
+/usr/bin/ruby2.5 -r ./siteconf20200807-9771-1nru8g4.rb extconf.rb
+checking if the C compiler accepts ... yes
+Building nokogiri using packaged libraries.
+Using mini_portile version 2.4.0
+checking for gzdopen() in -lz... no
+zlib is missing; necessary for building libxml2
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/usr/bin/$(RUBY_BASE_NAME)2.5
+	--help
+	--clean
+	--use-system-libraries
+	--enable-static
+	--disable-static
+	--with-zlib-dir
+	--without-zlib-dir
+	--with-zlib-include
+	--without-zlib-include=${zlib-dir}/include
+	--with-zlib-lib
+	--without-zlib-lib=${zlib-dir}/lib
+	--enable-cross-build
+	--disable-cross-build
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /home/guime/desafio_QA/vendor/bundle/ruby/2.5.0/extensions/x86_64-linux/2.5.0/nokogiri-1.10.10/mkmf.log
+
+extconf failed, exit code 1
