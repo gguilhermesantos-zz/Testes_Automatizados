@@ -32,7 +32,9 @@ Para instalar o Ruby, basta utilizar o comando:
 
 ### Cabybara, cucumber e selenium
 
-Faça a instalação dessas bibliotecas utilizando o comando:
+Faça a instalação dessas bibliotecas utilizando os comandos:
+
+`gem install bundler`
 
 `bundle install`
 
