@@ -3,7 +3,7 @@ Dado('que eu acesse o site') do
     visit 'https://kabum.com.br'
 end
 
-Quando('eu faço uma busca por {string}') do |produto|
+E('eu faço uma busca por {string}') do |produto|
     @produto = produto
     #Verificacao do campo de busca
     find('.sprocura').set produto
@@ -13,7 +13,7 @@ Quando('eu faço uma busca por {string}') do |produto|
     find('#bt-busca').click
 end
 
-Então('eu valido o retorno da busca') do
+E('eu valido o retorno da busca') do
     #Verificacao da lista de produto
     if (find_all('.sc-fzqNqU.jmuOAh', minimum: 1))
         p "O item procurado existe"
