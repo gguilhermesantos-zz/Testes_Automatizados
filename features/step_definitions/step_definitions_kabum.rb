@@ -15,7 +15,7 @@ end
 
 Então('eu valido o retorno da busca') do
     #Verificacao da lista de produto
-    if (find_all('.sc-fzqNqU.jmuOAh', minimum: 1)
+    if (find_all('.sc-fzqNqU.jmuOAh', minimum: 1))
         p "O item procurado existe"
     else
         p "O item procurado nao existe"
